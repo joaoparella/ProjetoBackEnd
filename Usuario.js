@@ -1,6 +1,8 @@
-class Usuario{
+import { Datas } from "./datas.js"; 
+
+export class Usuario{
     constructor(nome,email,senha){
-        this.datas = new (require("./datas.js"))()
+        this.datas = new Datas();
         this.nome = nome;
         this.email = email;
         this.senha = senha;
@@ -27,5 +29,3 @@ class Usuario{
         this.assinatura = this.datas.adicionarDias(this.assinatura, dias)
     }
 }
-
-module.exports = Usuario;
